@@ -5,9 +5,15 @@
     <title>Latoya's Site</title>
 </head>
 <body>
-<h1>Latoya's Site</h1>
+<h1>String Concat</h1>
+<?php
+    $word1 = "Hello";
+    $word2 = "World";
+?>
 
-<p> <?php echo "This is some text"; ?> </p>
+<p><?php echo $word1 . '' . $word2; ?></p>
+
+
     
 </body>
 </html>
