@@ -38,7 +38,7 @@
     <h3>Lab Solutions</h3>
     <ul>
         <li><a href="http://localhost/SE266-PHP-SQL/Coursework%20page/index.php" target="_blank">Week 2 - Coursework Page</a></li>
-        <li><a href="" target="_blank">Week 2 - Coursework Page</a></li>
+        <li><a href="http://localhost/SE266-PHP-SQL/Week%202/index.php" target="_blank">Week 2 - Patient Intake Form</a></li>
         <li><a href="" target="_blank">Week 3</a></li>
         <li><a href="" target="_blank">Week 4</a></li>
         <li><a href="" target="_blank">Week 5</a></li>
