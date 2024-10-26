@@ -3,9 +3,14 @@
 require_once 'checking.php';
 require_once 'savings.php';
 
-// Instantiate the account objects
-$checking = new CheckingAccount('C123', 1000, '12-20-2019');
-$savings = new SavingsAccount('S123', 5000, '03-20-2020');
+// Get the balances submitted via hidden inputs or use defaults if not set
+$checkingBalance = isset($_POST['checkingBalance']) ? (float)$_POST['checkingBalance'] : 1000;
+$savingsBalance = isset($_POST['savingsBalance']) ? (float)$_POST['savingsBalance'] : 5000;
+
+// Instantiate the account objects with the current balance
+$checking = new CheckingAccount('C123', $checkingBalance, '12-20-2019');
+$savings = new SavingsAccount('S123', $savingsBalance, '03-20-2020');
+
 
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -103,6 +108,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="account">
                 
                 <p><?php echo $checking->getAccountDetails(); ?></p>
+
+                <!-- Hidden input to pass current checking balance -->
+                <input type="hidden" name="checkingBalance" value="<?php echo $checking->getBalance(); ?>" />
                 
                 <!-- Withdrawal section -->
                 <div class="input-group">
@@ -120,6 +128,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="account">
                 
                 <p><?php echo $savings->getAccountDetails(); ?></p>
+
+                <!-- Hidden input to pass current savings balance -->
+                <input type="hidden" name="savingsBalance" value="<?php echo $savings->getBalance(); ?>" />
                 
                 <!-- Withdrawal section -->
                 <div class="input-group">
