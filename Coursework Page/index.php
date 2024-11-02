@@ -80,7 +80,7 @@
         <li><a href="http://localhost/SE266-PHP-SQL/Coursework%20page/index.php" target="_blank">Week 2 - Coursework Page</a></li>
         <li><a href="http://localhost/SE266-PHP-SQL/Week%202/index.php" target="_blank">Week 2 - Patient Intake Form</a></li>
         <li><a href="http://localhost/SE266-PHP-SQL/Week%203/atm.php" target="_blank">Week 3 - ATM</a></li>
-        <li><a href="http://localhost/SE266-PHP-SQL/Week%204/index.php" target="_blank"> Patient EHR CRUD</a></li>
+        <li><a href="http://localhost/SE266-PHP-SQL/Week%204/index.php" target="_blank"> Week 4 - Patient EHR CRUD</a></li>
         <li><a href="" target="_blank">Week 5</a></li>
         <li><a href="" target="_blank">Week 6</a></li>
         <li><a href="" target="_blank">Week 7</a></li>
