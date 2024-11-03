@@ -1,6 +1,6 @@
 <?php 
 include(__DIR__ . '/db.php');
-
+//Function to display patient records
 function getAllPatients() {
     global $db;
 
@@ -12,9 +12,9 @@ function getAllPatients() {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    return $results; // Return the results
+    return $results; 
 }
-
+//Function to add patient to database
 function addPatient($firstName, $lastName, $married, $birthDate) {
     global $db;
 
