@@ -81,7 +81,7 @@
         <li><a href="http://localhost/SE266-PHP-SQL/Week%202/index.php" target="_blank">Week 2 - Patient Intake Form</a></li>
         <li><a href="http://localhost/SE266-PHP-SQL/Week%203/atm.php" target="_blank">Week 3 - ATM</a></li>
         <li><a href="http://localhost/SE266-PHP-SQL/Week%204/index.php" target="_blank"> Week 4 - Patient EHR CRUD</a></li>
-        <li><a href="" target="_blank">Week 5</a></li>
+        <li><a href="http://localhost/SE266-PHP-SQL/Week%205/index.php" target="_blank">Week 5 - EHR CRUD Continued</a></li>
         <li><a href="" target="_blank">Week 6</a></li>
         <li><a href="" target="_blank">Week 7</a></li>
         <li><a href="" target="_blank">Week 8</a></li>

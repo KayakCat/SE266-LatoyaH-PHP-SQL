@@ -1,40 +1,62 @@
 <?php
-
 include __DIR__ . '/model/model_patients.php';
 include __DIR__ . '/function.php';
 
-//initialize variables
+// Initialize variables
 $error = "";
 $firstName = "";
 $lastName = "";
 $married = "";
 $birthDate = "";
 
-//Check if form has been submitted via POST method
-if (isPostRequest()) {
+// GET request for editing
+if (isGetRequest()) {
+    $patientId = filter_input(INPUT_GET, 'id');
+    if ($patientId) {
+        $patient = getPatientById($patientId);
+        $firstName = $patient['patientFirstName'];
+        $lastName = $patient['patientLastName'];
+        $married = $patient['patientMarried'] ? 'Yes' : 'No';
+        $birthDate = $patient['patientBirthDate'];
+    }
+}
 
-    //Get and clean data
+// Check if form has been submitted via POST method
+if (isPostRequest()) {
+    // Get and clean data
     $firstName = filter_input(INPUT_POST, 'firstName');
     $lastName = filter_input(INPUT_POST, 'lastName');
-    $married = filter_input(INPUT_POST, 'married'); 
+    $married = filter_input(INPUT_POST, 'married');
     $birthDate = filter_input(INPUT_POST, 'birthDate');
 
-    //Validate input and display error if any
+    // Validate input and display error if any
     if ($firstName == "") $error .= "<li>Please provide patient's first name</li>";
     if ($lastName == "") $error .= "<li>Please provide patient's last name</li>";
-    if ($married == "") $error .= "<li>Please select marital status</li>"; 
+    if ($married == "") $error .= "<li>Please select marital status</li>";
     if ($birthDate == "") $error .= "<li>Please provide a valid birth date</li>";
 
     if ($error == "") {
         // Convert married value to integer (1 or 0) before adding to database
         $marriedValue = ($married === 'Yes') ? 1 : 0;
-        addPatient($firstName, $lastName, $marriedValue, $birthDate);
-        //When submission is successful, redirect to view_patients page
-        header('Location: view_patients.php');
-        exit();
+
+        // Check which action button was clicked
+        if (isset($_POST['storePatient'])) {
+            addPatient($firstName, $lastName, $marriedValue, $birthDate);
+            header('Location: view_patients.php');
+            exit();
+        } elseif (isset($_POST['updatePatient'])) {
+            updatePatient($patientId, $firstName, $lastName, $marriedValue, $birthDate);
+            header('Location: view_patients.php');
+            exit();
+        } elseif (isset($_POST['deletePatient'])) {
+            deletePatient($patientId);
+            header('Location: view_patients.php');
+            exit();
+        }
     }
 }
 ?>
+
 <!--Form-->
 <div class="container">
     <div class="col-sm-12">
