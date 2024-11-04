@@ -1,11 +1,11 @@
-<?php
+<?php 
 include __DIR__ . '/model/model_patients.php';
 include __DIR__ . '/function.php';
 
 // Initialize variables
 $error = "";
 $firstName = "";
-$lastName = "";
+$lastName = ""; 
 $married = "";
 $birthDate = "";
 
@@ -57,76 +57,85 @@ if (isPostRequest()) {
 }
 ?>
 
-<!--Form-->
-<div class="container">
-    <div class="col-sm-12">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Add Patient</h2>
 
         <!-- Link to return to the View Patients page -->
-        <a class='mar12' href="view_patients.php">Back to View All Patients</a>
-        
-        <h2 class='mar12'>Add Patient</h2>
+        <div class="text-center mb-3">
+            <a class='btn btn-secondary' href="view_patients.php">Back to View All Patients</a>
+        </div>
 
-        <!--Display errors, if any-->
+        <!-- Display errors, if any -->
         <form name="patients" method="post">
             <?php if ($error != ""): ?>
-            <div class="error">
+            <div class="alert alert-danger">
                 <p>Please fix the following and resubmit:</p>
-                <ul style="color: red;">
+                <ul>
                     <?php echo $error; ?>
                 </ul>
             </div>
             <?php endif; ?>
+            
             <!-- Start of form fields -->
-            <div class="wrapper">
-                <div class="form-group">
-                    <div class="label">
-                        <label for="firstName" style="color: black;">First Name:</label>
-                    </div>
-                    <div>
-                        <input type="text" id="firstName" name="firstName" class="form-control" value="<?= $firstName; ?>" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label for="lastName" style="color: black;">Last Name:</label>
-                    </div>
-                    <div>
-                        <input type="text" id="lastName" name="lastName" class="form-control" value="<?= $lastName; ?>" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label for="married" style="color: black;">Is the patient married?</label>
-                    </div>
-                    <div>
-                        <select id="married" name="married" class="form-control">
-                            <option value="">Select...</option>
-                            <option value="Yes" <?= ($married === 'Yes') ? 'selected' : ''; ?>>Yes</option>
-                            <option value="No" <?= ($married === 'No') ? 'selected' : ''; ?>>No</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label for="birthDate" style="color: black;">Birth Date:</label>
-                    </div>
-                    <div>
-                        <input type="date" id="birthDate" name="birthDate" class="form-control" value="<?= $birthDate; ?>" />
-                    </div>
-                </div>
-                <!--End form fields-->
-                <div>&nbsp;</div>
-
-                <!--Submit and Cancel buttons-->
-                <div>
-                    <input class="btn btn-success" type="submit" name="storePatient" value="Add Patient Information" />
-                </div>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" value="<?= $firstName; ?>" />
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" class="form-control" value="<?= $lastName; ?>" />
+            </div>
+            
+            <div class="form-group">
+                <label for="married">Is the patient married?</label>
+                <select id="married" name="married" class="form-control">
+                    <option value="">Select...</option>
+                    <option value="Yes" <?= ($married === 'Yes') ? 'selected' : ''; ?>>Yes</option>
+                    <option value="No" <?= ($married === 'No') ? 'selected' : ''; ?>>No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthDate">Birth Date:</label>
+                <input type="date" id="birthDate" name="birthDate" class="form-control" value="<?= $birthDate; ?>" />
+            </div>
+            
+            <!-- Submit and Cancel buttons -->
+            <div class="text-center mt-3">
+                <input class="btn btn-success" type="submit" name="storePatient" value="Add Patient Information" />
             </div>
         </form>
-        <div>
+
+        <div class="text-center mt-2">
             <a class="btn btn-warning" href="view_patients.php">Cancel</a> 
         </div>
     </div>
-</div>
 
-
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

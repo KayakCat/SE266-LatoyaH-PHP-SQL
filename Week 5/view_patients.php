@@ -28,9 +28,9 @@
                 // Fetch all patients from the database after deletion
                 $patients = getAllPatients();
             ?>
-
             <!-- Button to add a new patient -->
             <a href="manage_patients.php" class="btn btn-primary">Add Patient</a>
+
 
             <table class="table table-striped">
                 <thead>
