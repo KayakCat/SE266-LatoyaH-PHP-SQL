@@ -7,67 +7,67 @@
 </head>
 <style>
         body {
-            background-color: #f0f4ff; /* Light background */
-            font-family: Arial, sans-serif; /* Font styling */
-            color: #333; /* Dark text color */
-            margin: 20px; /* Margin around the body */
+            background-color: #f0f4ff; 
+            font-family: Arial, sans-serif; 
+            color: #333; 
+            margin: 20px; 
         }
         h1 {
-            color: #4b0082; /* Dark purple for main heading */
+            color: #4b0082; 
         }
         h2 {
-            color: #5a5a5a; /* Grey for subheading */
+            color: #5a5a5a; 
         }
         h3 {
-            color: #4b0082; /* Dark purple for section headings */
-            border-bottom: 2px solid #8a2be2; /* Underline with lighter purple */
-            padding-bottom: 5px; /* Space below the heading */
+            color: #4b0082; 
+            border-bottom: 2px solid #8a2be2; 
+            padding-bottom: 5px; 
         }
         a {
-            color: #000080; /* Dark blue for links */
-            text-decoration: none; /* Remove underline */
+            color: #000080; 
+            text-decoration: none; 
         }
         a:hover {
-            text-decoration: underline; /* Underline on hover */
+            text-decoration: underline; 
         }
         ul {
-            list-style-type: none; /* Remove bullets */
-            padding: 0; /* Remove padding */
+            list-style-type: none; 
+            padding: 0; 
         }
         li {
-            margin-bottom: 10px; /* Space between list items */
+            margin-bottom: 10px; 
         }
         /* Footer styles */
         footer {
             margin-top: 30px;
-            text-align: center; /* Center footer */
-            font-size: 0.9em; /* Smaller font for footer */
-            color: #888; /* Grey color for footer text */
+            text-align: center; 
+            font-size: 0.9em;
+            color: #888; 
         }
         
         li.final-project {
-            list-style: none; /* Removes bullet point */
-            margin: 20px 0; /* Adds vertical spacing */
-            text-align: center; /* Centers the text */
+            list-style: none; 
+            margin: 20px 0;
+            text-align: center; 
         }
 
         li.final-project a {
-            text-decoration: none; /* Removes underline */
-            font-size: 30px; /* Makes text big */
-            font-weight: bold; /* Makes text bold */
-            color: #fff; /* Sets text color to white */
-            background-color: #ff5733; /* Bright orange-red background */
-            padding: 15px 30px; /* Adds padding around the text */
-            border: 3px solid #ffbd69; /* Adds a contrasting border */
-            border-radius: 10px; /* Rounds the corners */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-            transition: transform 0.2s, background-color 0.3s; /* Smooth hover effect */
+            text-decoration: none; 
+            font-size: 30px; 
+            font-weight: bold; 
+            color: #fff; 
+            background-color: #ff5733; 
+            padding: 15px 30px; 
+            border: 3px solid #ffbd69; 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.2s, background-color 0.3s; 
         }
 
         li.final-project a:hover {
-            background-color: #ffbd69; /* Changes background to light orange on hover */
-            color: #000; /* Changes text color to black on hover */
-            transform: scale(1.1); /* Slightly enlarges the link on hover */
+            background-color: #ffbd69; 
+            color: #000; 
+            transform: scale(1.1); 
         }
     
     </style>
