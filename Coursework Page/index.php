@@ -44,6 +44,32 @@
             font-size: 0.9em; /* Smaller font for footer */
             color: #888; /* Grey color for footer text */
         }
+        
+        li.final-project {
+            list-style: none; /* Removes bullet point */
+            margin: 20px 0; /* Adds vertical spacing */
+            text-align: center; /* Centers the text */
+        }
+
+        li.final-project a {
+            text-decoration: none; /* Removes underline */
+            font-size: 30px; /* Makes text big */
+            font-weight: bold; /* Makes text bold */
+            color: #fff; /* Sets text color to white */
+            background-color: #ff5733; /* Bright orange-red background */
+            padding: 15px 30px; /* Adds padding around the text */
+            border: 3px solid #ffbd69; /* Adds a contrasting border */
+            border-radius: 10px; /* Rounds the corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+            transition: transform 0.2s, background-color 0.3s; /* Smooth hover effect */
+        }
+
+        li.final-project a:hover {
+            background-color: #ffbd69; /* Changes background to light orange on hover */
+            color: #000; /* Changes text color to black on hover */
+            transform: scale(1.1); /* Slightly enlarges the link on hover */
+        }
+    
     </style>
 <body>
     <h1> Fall 2024 PHP Coursework </h1>
@@ -86,7 +112,7 @@
         <li><a href="" target="_blank">Week 7</a></li>
         <li><a href="" target="_blank">Week 8</a></li>
         <li><a href="" target="_blank">Week 9</a></li>
-        <li><a href="" target="_blank">Week 10</a></li>
+        <li class="final-project"><a href="http://localhost/SE266-PHP-SQL/Final%20Project/index.php" target="_blank">FINAL PROJECT</a></li>
     </ul>
 
     <?php include 'includes/index_footer.php'; ?>
